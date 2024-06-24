@@ -1,0 +1,21 @@
+version: '3'
+services:
+  api:
+    build: .
+    ports:
+      - "3556:3556"
+    cpus: ${cpu_limit}
+    mem_limit: 8g
+    environment:
+      - APP_ENV=${APP_ENV}
+    volumes:
+      - ./:/app
+      - type: bind
+        source: ./../logger
+        target: /logger
+      - type: bind
+        source: ./../knowledge
+        target: /knowledge
+      - type: bind
+        source: ./../index
+        target: /index

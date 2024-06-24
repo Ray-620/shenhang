@@ -1,0 +1,31 @@
+from zhipuai import ZhipuAI
+import json
+
+
+measure_num = 343321
+question = "过站机组反应深圳进近过程，高度1500米，起落架警告响，红灯亮，大约持续5S后警告消失。TA UNIT REFLECTS THE APPROACH PROCESS OF SHENZHEN, WITH THE HEIGHT1500 METERS,THE LANDING GEAR WARNING SOUNDED, THE RED LIGHT WAS ONAND THE WARNING DISAPPEARED AFTER ABOUT 5S. "
+task = "TASK34-33-21-000-801: LR RA RECEIVER TRANSMITTER - REMOVAL INSTALLATION \n 1 General \n A This procedure has two tasks \n 1 A removal of the low range radio altimeter LR RA receiver transmitter R T \n 2 An installation of the LR RAR T \n B The two LR RAR Ts are in the main equipment center The No 1 LR RAR T is on the E 3 electronics \n equipment rack shelf No 1 The No 2 LR RAR Tis on the E 3 electronics equipment rack shelf No \n 2 \n TASK 34 - 33 - 21 - 000 - 801 \n 2 Low Range Radio Altimeter LR RA Receiver Transmitter R T Removal \n Figure 401 \n A References \n Reference Title \n 20 - 10 - 07 - 000 - 801 E EBox Removal P B 201 \n B Location Zones \n Zone Area \n 117 Electrical and Electronics Compartment - Left \n 118 Electrical and Electronics Compartment - Right \n 211 Flight Compartment - Left \n 212 Flight Compartment - Right \n C Access Panels \n Number Name Location \n 117 A Electronic Equipment Access Door \n D Removal Procedure \n SUB TASK 34 - 33 - 21 - 860 - 001 \n 1 Open these circuit breakers and install safety tags \n CAPT Electrical System Panel P 18 - 1 \n Row Col Number Name \n B 4 C 01384 RADIO NAVIGATION RADIO ALT M 1 \n F O Electrical System Panel P 6 - 1 \n Row Col Number Name \n A 16 C 01385 RADIO NAVIGATION RADIO ALT M 2 \n SUB TASK 34 - 33 - 21 - 010 - 001 \n 2 To get access to the main equipment center open this access panel \n Number Name Location \n 117 A Electronic Equipment Access Door 737 - 600 700 800 900 \n AIRCRAFT MAINTENANCE MANUAL \n 34 - 33 - 21 \n NoC \n Page 401 \n D 633 A 101 - S HZ Oct 15 2014 \n EC CN 9 E 991 BOEING PROPRIETARY - Copyright Unpublished Work - See title page for details EFFECT IV IT Y \n S HZ ALL","TASK34-33-21-400-801""TASK 34 - 33 - 21 - 400 - 801 \n 3 Low Range Radio Altimeter LR RA Receiver Transmitter R T Installation \n Figure 401 \n A References \n Reference Title \n 20 - 10 - 07 - 400 - 801 E EBox Installation P B 201 \n 24 - 22 - 00 - 860 - 811 Supply Electrical Power P B 201 \n 24 - 22 - 00 - 860 - 812 Remove Electrical Power P B 201 \n B Expendables Parts \n AMMIt em Description A IPC Reference A IPC Effect iv it y \n 1 LR RAR T 34 - 33 - 21 - 01 - 005 S HZ 860 - 866 \n 34 - 33 - 21 - 01 - 060 S HZ 002 009 - 699 706 \n 867 - 869 871 - 874 \n 901 - 999 \n 34 - 33 - 21 - 01 B - 010 S HZ 801 - 825 827 - 847 \n 850 - 852 855 - 859 \n 876 - 899 \n 34 - 33 - 21 - 02 - 060 S HZ 721 - 799 \n C Location Zones \n Zone Area \n 117 Electrical and Electronics Compartment - Left \n 118 Electrical and Electronics Compartment - Right \n 211 Flight Compartment - Left \n 212 Flight Compartment - Right \n D Access Panels \n Number Name Location \n 117 A Electronic Equipment Access Door \n E Installation Procedure \n SUB TASK 34 - 33 - 21 - 860 - 002 \n 1 Make sure that these circuit breakers are open and have safety tags \n CAPT Electrical System Panel P 18 - 1 \n Row Col Number Name \n B 4 C 01384 RADIO NAVIGATION RADIO ALT M 1 \n F O Electrical System Panel P 6 - 1 \n Row Col Number Name \n A 16 C 01385 RADIO NAVIGATION RADIO ALT M 2 \n SUB TASK 34 - 33 - 21 - 420 - 001 \n CAUTION DO NOT TOUCH THE CONNECTOR PINS OR OTHER CONDUCTORS ON \n THE LR RAR T IF YOU TOUCH THESE CONDUCTORS ELECTROSTATIC \n DISCHARGE CAN CAUSE DAMAGE TO THE LR RAR T \n 2 To install the LR RAR T 1 do this task E EBox Installation TASK 20 - 10 - 07 - 400 - 801 737 - 600 700 800 900 \n AIRCRAFT MAINTENANCE MANUAL \n 34 - 33 - 21 \n NoC \n Page 404 \n D 633 A 101 - S HZ Jun 15 2020 \n EC CN 9 E 991 BOEING PROPRIETARY - Copyright Unpublished Work - See title page for details EFFECT IV IT Y \n S HZ ALL SUB TASK 34 - 33 - 21 - 410 - 001 \n 3 Close this access panel \n Number Name Location \n 117 A Electronic Equipment Access Door \n SUB TASK 34 - 33 - 21 - 860 - 003 \n 4 Remove the safety tags and close these circuit breakers \n CAPT Electrical System Panel P 18 - 1 \n Row Col Number Name \n B 4 C 01384 RADIO NAVIGATION RADIO ALT M 1 \n F O Electrical System Panel P 6 - 1 \n Row Col Number Name \n A 16 C 01385 RADIO NAVIGATION RADIO ALT M 2 \n F Installation Test \n SUB TASK 34 - 33 - 21 - 860 - 004 \n 1 Do this task Supply Electrical Power TASK 24 - 22 - 00 - 860 - 811 \n SUB TASK 34 - 33 - 21 - 860 - 005 \n 2 Set the SOURCE switch on the instrument switching module to the AUTO position \n SUB TASK 34 - 33 - 21 - 710 - 001 \n 3 Make sure - 4 2 feet radio altitude is displayed on the captain's and the first officer's EF IS \n displays \n SUB TASK 34 - 33 - 21 - 860 - 006 \n 4 Do this task Remove Electrical Power TASK 24 - 22 - 00 - 860 - 812 \n END OF TASK"
+# task = ""
+history = "过站依据AMM34-46-00执行GPWS测试，无当前和历史代码，检查RA正常，依据AMM22-11-00执行DFCS操作测试，无当前和历史代码。TA REF AMM34-46-00 DO THE TEST OF GPWS,NO CURRENT AND HISTORY CODE,CHECK THE RA NORMAL,REF AMM22-11-00 DO THE OPERATIONAL TEST OF DFCS,NO CURRENT HISTORY CODE.20日深圳航后检查4个天线外部完成清洁，依据AMM34-33-21更换RA收发机，检查正常测试正常.20TH SZX AF CHECKED THE 4 ANTENNA AND CLEANED ,REFAMM34-33-21 REPLACED THE RA TRANSCEIVER,CHECKED OK TESTED OK."
+# history = str(handbook[measure_num])
+
+
+def zhipuai(question, task, history):
+    client = ZhipuAI(api_key="") # 填写您自己的APIKey
+    # print(task)
+    content = "根据我给出的内容返回一个详细检修推荐的步骤。必须使用提供的上下文来回答，不许自己给出解释!!!如果你不知道答案，就说你不知道，不要试图编造答案。给出的内容包括一个相似问题的历史检修操作，和检修手册中检修操作的上下文或只有历史检修操作。其中手册的内容上下文中可能有多个Task，或者一个Task对应多个SUBTASK+对应的编号，你需要自己去识别对应的Task对应的内容。请从上下文中选择相关的文本来回答我的输入问题，prompt =开始吧!我的输入:{"+ str(question) +"}，历史检修操作：{"+ str(history) +"}给出的上下文:{"+ str(task) +"}请用中文以以下格式回答:Task-编号:（Subtask编号）对应的全部详细操作步骤。若没有手册内容，只需要根据历史检修记录整理出具体操作步骤。"
+    print("content is %s"%content)
+    response = client.chat.completions.create(
+        model="glm-4",  # 填写需要调用的模型名称
+        messages=[
+            {"role": "system", "content": "你是一个乐于解答问题的助手，你的任务是为用户提供专业、准确、有见地的建议。"},
+            {
+                "role": "user", 
+                "content": content
+            },
+        ],
+    )
+    print(response.choices[0].message.content)
+    return response.choices[0].message.content
+
+# zhipuai(question, task, history)
